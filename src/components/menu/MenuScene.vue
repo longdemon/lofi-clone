@@ -22,6 +22,12 @@
 import { Icon } from "@iconify/vue";
 import { useBackgroundState } from "../../store";
 import chillImg from "../../assets/modifier/chill.png"
+import newyorkImg from "../../assets/modifier/new-york.png"
+import cafesetImg from "../../assets/modifier/cafe-set.png"
+import forestsetImg from "../../assets/modifier/forest-set.png"
+import lofideskImg from "../../assets/modifier/lofi_desk.png"
+import oceansetImg from "../../assets/modifier/ocean-set.png"
+import vansetImg from "../../assets/modifier/van-set.png"
 const {hanleChangeScene} = useBackgroundState()
 
 const listScene = [
@@ -31,28 +37,28 @@ const listScene = [
     id: 'christmas'
   },
   {
-    linkScene: "../../../src/assets/modifier/new-york.png",
+    linkScene: newyorkImg,
     isAvailable: true,
     id: 'new-york'
   },
   {
-    linkScene: "../../../src/assets/modifier/cafe-set.png",
+    linkScene: cafesetImg,
     isAvailable: false
   },
   {
-    linkScene: "../../../src/assets/modifier/forest-set.png",
+    linkScene: forestsetImg,
     isAvailable: false
   },
   {
-    linkScene: "../../../src/assets/modifier/lofi_desk.png",
+    linkScene: lofideskImg,
     isAvailable: false
   },
   {
-    linkScene: "../../../src/assets/modifier/ocean-set.png",
+    linkScene: oceansetImg,
     isAvailable: false
   },
   {
-    linkScene: "../../../src/assets/modifier/van-set.png",
+    linkScene: vansetImg,
     isAvailable: false
   }
 ];
