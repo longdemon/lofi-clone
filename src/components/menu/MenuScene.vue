@@ -76,7 +76,8 @@ const listScene = [
   padding: 0px 10px 20px 25px;
   border-radius: 30px;
   right: 105px;
-  top: 140px;
+  top: 50%;
+  transform: translate(0px, -50%);
   overflow-y: scroll;
   height: 480px;
   border-top: 25px solid;

@@ -29,7 +29,8 @@ const { hanleChangeScene } = useBackgroundState();
   padding: 20px 25px;
   border-radius: 30px;
   right: 105px;
-  top: 240px;
+  top: 50%;
+  transform: translate(0px, -50%);
 }
 .playlists-template{
   gap: 20px;

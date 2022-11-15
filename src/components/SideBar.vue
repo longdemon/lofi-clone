@@ -20,13 +20,13 @@
         <Icon icon="iconoir:selective-tool" width="30" height="30" class="icon"></Icon>
       </div>
     </div>
-    <Transition name="slide-fade">
+    <Transition>
       <MenuMood v-show="isOpenMenuMood"/>
     </Transition>
-    <Transition name="slide-fade">
+    <Transition>
       <MenuPlaylist v-show="isOpenPlaylist" />
     </Transition>
-    <Transition name="slide-fade">
+    <Transition>
       <MenuScene v-show="isOpenMenuScene" />
     </Transition>
   </div>
@@ -92,18 +92,13 @@ const handlePlaylist = () => {
   cursor: pointer;
 }
 
-.slide-fade-enter-active {
-  transition: all 0.4s ease-out;
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
 }
-.slide-fade-leave-active {
-  transition: all 0.4s cubic-bezier(1, 0.5, 0.8, 1);
-}
-.slide-fade-enter-from {
-  transform: translateX(30px);
-  opacity: 0;
-}
-.slide-fade-leave-to {
-  transform: translateX(-30px);
+
+.v-enter-from,
+.v-leave-to {
   opacity: 0;
 }
 </style>

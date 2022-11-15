@@ -207,7 +207,8 @@ const listNoise = [
   padding: 25px 30px;
   border-radius: 30px;
   right: 105px;
-  top: 140px;
+  top: 50%;
+  transform: translate(0px, -50%);
 }
 .icon {
   color: var(--color-icon);
