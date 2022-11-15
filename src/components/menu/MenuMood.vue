@@ -60,6 +60,21 @@ import { Icon } from "@iconify/vue";
 import { ref, computed, watch } from "vue";
 import Noise from "./Noise.vue";
 import { useStyleMusicState } from "../../store";
+import trafficAudio from "../../assets/effect/city_traffic.mp3"
+import rainAudio from "../../assets/effect/rain_city.mp3"
+import fireplaceAudio from "../../assets/effect/fireplace.mp3"
+import campfireAudio from "../../assets/effect/campfire.mp3"
+import forestAudio from "../../assets/effect/forest_night.mp3"
+import rainForestAudio from "../../assets/effect/rain_forest.mp3"
+import wavesAudio from "../../assets/effect/waves.mp3"
+import fanAudio from "../../assets/effect/fan.mp3"
+import summerStormAudio from "../../assets/effect/summer_storm.mp3"
+import riverAudio from "../../assets/effect/river.mp3"
+import birdsAudio from "../../assets/effect/birds.mp3"
+import peopleTalkInsideAudio from "../../assets/effect/people_talk_inside.mp3"
+import windAudio from "../../assets/effect/wind.mp3"
+import oceanAudio from "../../assets/effect/ocean.mp3"
+import snowAudio from "../../assets/effect/snow.mp3"
 
 const {styleMusicState, hanleChangeVolume, hanleChangeStyle} = useStyleMusicState()
 const value = ref(50);
@@ -91,91 +106,91 @@ const listNoise = [
     name: "City traffic",
     idInput: "traffic-volume",
     idAudio: "traffic-audio",
-    audioLink: "../../../src/assets/effect/city_traffic.mp3"
+    audioLink: trafficAudio
   },
   {
     name: "City rain",
     idInput: "rain-volume",
     idAudio: "rain-audio",
-    audioLink: "../../../src/assets/effect/rain_city.mp3"
+    audioLink: rainAudio
   },
   {
     name: "Fireplace",
     idInput: "fireplace-volume",
     idAudio: "fireplace-audio",
-    audioLink: "../../../src/assets/effect/fireplace.mp3"
+    audioLink: fireplaceAudio
   },
   {
     name: "Campfire",
     idInput: "campfire-volume",
     idAudio: "campfire-audio",
-    audioLink: "../../../src/assets/effect/campfire.mp3"
+    audioLink: campfireAudio
   },
   {
     name: "Forest Sounds",
     idInput: "forest-volume",
     idAudio: "forest-audio",
-    audioLink: "../../../src/assets/effect/forest_night.mp3"
+    audioLink: forestAudio
   },
   {
     name: "Forest Rain",
     idInput: "forest-rain-volume",
     idAudio: "forest-rain-audio",
-    audioLink: "../../../src/assets/effect/rain_forest.mp3"
+    audioLink: rainForestAudio
   },
   {
     name: "Waves",
     idInput: "waves-volume",
     idAudio: "waves-audio",
-    audioLink: "../../../src/assets/effect/waves.mp3"
+    audioLink: wavesAudio
   },
   {
     name: "Fan",
     idInput: "fan-volume",
     idAudio: "fan-audio",
-    audioLink: "../../../src/assets/effect/fan.mp3"
+    audioLink: fanAudio
   },
   {
     name: "Summer Storm",
     idInput: "storm-volume",
     idAudio: "storm-audio",
-    audioLink: "../../../src/assets/effect/summer_storm.mp3"
+    audioLink: summerStormAudio
   },
   {
     name: "River",
     idInput: "river-volume",
     idAudio: "river-audio",
-    audioLink: "../../../src/assets/effect/river.mp3"
+    audioLink: riverAudio
   },
   {
     name: "Bird",
     idInput: "bird-volume",
     idAudio: "bird-audio",
-    audioLink: "../../../src/assets/effect/birds.mp3"
+    audioLink: birdsAudio
   },
   {
     name: "People Talking",
     idInput: "people-volume",
     idAudio: "people-audio",
-    audioLink: "../../../src/assets/effect/people_talk_inside.mp3"
+    audioLink: peopleTalkInsideAudio
   },
   {
-    name: "River Talking",
-    idInput: "river-volume",
-    idAudio: "river-audio",
-    audioLink: "../../../src/assets/effect/river.mp3"
+    name: "Wind",
+    idInput: "wind-volume",
+    idAudio: "wind-audio",
+    audioLink: windAudio
   },
   {
     name: "Ocean Sound",
     idInput: "ocean-volume",
     idAudio: "ocean-audio",
-    audioLink: "../../../src/assets/effect/ocean.mp3"
+    audioLink: oceanAudio
   },
   {
     name: "Blizzard Talking",
     idInput: "blizzard-volume",
     idAudio: "blizzard-audio",
-    audioLink: "../../../src/assets/effect/snow.mp3"
+    audioLink: snowAudio
   }
 ];
 </script>
