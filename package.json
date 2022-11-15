@@ -1,0 +1,21 @@
+{
+  "name": "lofi-clone",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fortawesome/vue-fontawesome": "^3.0.2",
+    "bootstrap-vue-3": "^0.4.7",
+    "vee-validate": "^4.7.2",
+    "vue": "^3.2.41",
+    "vue-router": "^4.1.5"
+  },
+  "devDependencies": {
+    "@iconify/vue": "^4.0.0",
+    "@vitejs/plugin-vue": "^3.1.2",
+    "vite": "^3.1.8"
+  }
+}

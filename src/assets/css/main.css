@@ -1,0 +1,63 @@
+@import './base.css';
+
+#app {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.4s;
+}
+/* thumb icon */
+#waves-volume::-webkit-slider-thumb{
+  background: url(../thumb-icon//wave.svg) white;
+}
+#traffic-volume::-webkit-slider-thumb{
+  background: url(../thumb-icon/traffic.svg) white
+}
+#rain-volume::-webkit-slider-thumb{
+  background: url(../thumb-icon/rain.svg) white
+}
+#fireplace-volume::-webkit-slider-thumb{
+  background: url(../thumb-icon/fire1.svg) white
+}
+#campfire-volume::-webkit-slider-thumb{
+  background: url(../thumb-icon/fire2.svg) white
+}
+#forest-volume::-webkit-slider-thumb{
+  background: url(../thumb-icon/forest.svg) white
+}
+#forest-rain-volume::-webkit-slider-thumb{
+  background: url(../thumb-icon/rain.svg) white
+}
+#fan-volume::-webkit-slider-thumb{
+  background: url(../thumb-icon/fan.svg) white
+}
+#storm-volume::-webkit-slider-thumb{
+  background: url(../thumb-icon/storm.svg) white
+}
+#river-volume::-webkit-slider-thumb{
+  background: url(../thumb-icon/river.svg) white
+}
+#bird-volume::-webkit-slider-thumb{
+  background: url(../thumb-icon/bird.svg) white
+}
+#people-volume::-webkit-slider-thumb{
+  background: url(../thumb-icon/people.svg) white;
+  background-size: 80%;
+}
+#wind-volume::-webkit-slider-thumb{
+  background: url(../thumb-icon/wind.svg) white
+}
+#ocean-volume::-webkit-slider-thumb{
+  background: url(../thumb-icon/wave.svg) white
+}
+#blizzard-volume::-webkit-slider-thumb{
+  background: url(../thumb-icon/blizzard.svg) white;
+}
