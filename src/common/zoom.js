@@ -1,11 +1,14 @@
-var html = document.querySelector("html");
-const zoomBtn = document.querySelector("#zoom");
-zoomBtn.onclick = (e) => {
-  e.stopPropagation();
-  var isFullScreen = document.fullscreenElement;
-  if (isFullScreen === null) {
-    html.requestFullscreen();
-  } else {
-    document.exitFullscreen();
+class FunctionCommon {
+  handleZoom() {
+    var html = document.querySelector("html");
+    var isFullScreen = document.fullscreenElement;
+
+    if (isFullScreen === null) {
+      html.requestFullscreen();
+    } else {
+      document.exitFullscreen();
+    }
   }
-};
+}
+
+export default new FunctionCommon();

@@ -15,7 +15,7 @@
         </label>
       </button>
       <button class="login-bth" @click="handleOpenModal">Login</button>
-      <img id="zoom" class="button" src="../assets/thumb-icon/fullscreen.svg" alt />
+      <img @click="handleZoom" class="button" src="../assets/thumb-icon/fullscreen.svg" alt />
       <div style="position: relative;">
         <img class="button" src="../assets/thumb-icon/menu.svg" alt @click="isShowMenu = !isShowMenu" />
         <Transition>
@@ -31,6 +31,7 @@ import { ref } from "vue";
 import Logo from "./logo/Logo.vue";
 import Menu from "./menu/MenuSetting.vue";
 import { useBackgroundState } from "../store";
+import common from "../common/zoom.js"
 
 const isDay = ref(true);
 const isShowMenu = ref(false);
@@ -43,6 +44,10 @@ function handleOpenModal() {
 const handelChangeDayNight = () => {
   emit("onChangeDayNight", isDay.value);
 };
+
+const handleZoom = () => {
+  common.handleZoom()
+}
 
 </script>
 

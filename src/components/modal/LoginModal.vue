@@ -113,6 +113,7 @@ function handleChangeSignup() {
 .form-control,
 .form-control:focus {
   background-color: var(--background-input);
+  color: #fff;
 }
 .form-floating label {
   color: #ccc;

@@ -48,30 +48,36 @@ const volumeSize = computed(() => {
     "%, transparent 100%)"
   );
 });
-const audio = new Audio(props.audioLink)
-const {backgroundState, toggleStarryRain} = useBackgroundState()
+const audio = new Audio(props.audioLink);
+const { backgroundState, toggleStarryRain } = useBackgroundState();
 
-
-const handelChangeStarryRain = (isStarry) => {
+const handelChangeStarryRain = isStarry => {
   emit("onChangeStarryRain", isDay.value);
 };
 
-watch(value, (value) => {
-  if(Number(value) > 0){
-    audio.play()
-    audio.volume = Number(value)/100
-    audio.loop = true
-    if(props.idInput === "rain-volume"){
-      toggleStarryRain(false)
+watch(value, value => {
+  if (Number(value) > 0) {
+    audio.play();
+    audio.volume = Number(value) / 100;
+    audio.loop = true;
+    if (
+      props.idInput === "rain-volume" ||
+      props.idInput === "storm-volume" ||
+      props.idInput === "forest-rain-volume"
+    ) {
+      toggleStarryRain(false);
     }
   } else {
-    audio.pause()
-    if(props.idInput === "rain-volume"){
-      toggleStarryRain(true)
+    audio.pause();
+    if (
+      props.idInput === "rain-volume" ||
+      props.idInput === "storm-volume" ||
+      props.idInput === "forest-rain-volume"
+    ) {
+      toggleStarryRain(true);
     }
   }
-})
-
+});
 </script>
 
 <style scoped>
