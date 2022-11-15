@@ -159,4 +159,9 @@ const playPrevSong = () => {
 .control-btn:hover {
   background-color: #ffffff6b
 }
+@media screen and (max-width: 400px) {
+  .music-info{
+    display: none
+  }
+}
 </style>

@@ -2,7 +2,7 @@
   <div>
     <div class="side-bar">
       <div class="item" @click="handleMenuMood">
-        <Icon icon="fa6-solid:sliders" width="30" height="30" class="icon"></Icon>
+        <Icon icon="fa6-solid:sliders" width="30" height="30" class="icon" :class="{'isOpen': isOpenMenuMood}"></Icon>
       </div>
       <div class="item">
         <Icon
@@ -11,17 +11,18 @@
           width="30"
           height="30"
           class="icon"
+          :class="{'isOpen': isOpenPlaylist}"
         ></Icon>
       </div>
       <div class="item" @click="handleMenuScene">
-        <Icon icon="uis:scenery" width="30" height="30" class="icon"></Icon>
+        <Icon icon="uis:scenery" width="30" height="30" class="icon" :class="{'isOpen': isOpenMenuScene}"></Icon>
       </div>
       <div class="item">
         <Icon icon="iconoir:selective-tool" width="30" height="30" class="icon"></Icon>
       </div>
     </div>
     <Transition>
-      <MenuMood v-show="isOpenMenuMood"/>
+      <MenuMood v-show="isOpenMenuMood" />
     </Transition>
     <Transition>
       <MenuPlaylist v-show="isOpenPlaylist" />
@@ -75,9 +76,28 @@ const handlePlaylist = () => {
   transform: translate(-50%, -50%);
   right: 0px;
 }
+
+@media screen and (max-width: 400px) {
+  .side-bar {
+    flex-direction: row;
+    bottom: 10%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    right: unset;
+    top: unset;
+  }
+  .item {
+  padding: 15px !important;
+  border-top: 1px solid #4e5054;
+}
+}
+
 .item {
   padding: 20px 0;
   border-top: 1px solid #4e5054;
+}
+.isOpen{
+  color: #fff !important;
 }
 .item:first-child {
   border-top: none;

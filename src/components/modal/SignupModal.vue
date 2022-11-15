@@ -52,7 +52,7 @@ function handleChangeSignup() {
     <Logo height="150" class="mv-l" />
     <h1 class="white">Nice to meet you</h1>
     <h4 class="white">Sign up for a free account.</h4>
-    <Form @submit="onSubmitLogin" class="form-login d-flex flex-column col-4 align-items-center">
+    <Form @submit="onSubmitLogin" class="form-login d-flex flex-column col-md-4 col-8 align-items-center">
       <div class="mv-l col-12">
         <div class="form-row">
           <div class="form-floating mb-3">

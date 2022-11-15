@@ -8,7 +8,15 @@ defineProps({
 </script>
 
 <template>
-    <div style="z-index: 2;">
+    <div class="logo" style="z-index: 2;">
         <img src="../../assets/logo.gif" :style="{ height: height + 'px'}"/>
     </div>
 </template>
+
+<style>
+@media screen and (max-width: 400px){
+  .logo{
+    display: none;
+  }
+}
+</style>

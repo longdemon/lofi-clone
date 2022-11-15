@@ -11,7 +11,7 @@
       >
         <img :src="scene.linkScene" alt class="video-item--img" />
         <button v-if="!scene.isAvailable">
-          <Icon icon="fa-solid:crown" width="25" height="25"></Icon> Go Premium
+          <Icon icon="fa-solid:crown" width="25" height="25"></Icon>Go Premium
         </button>
       </div>
     </div>
@@ -21,25 +21,25 @@
 <script setup>
 import { Icon } from "@iconify/vue";
 import { useBackgroundState } from "../../store";
-import chillImg from "../../assets/modifier/chill.png"
-import newyorkImg from "../../assets/modifier/new-york.png"
-import cafesetImg from "../../assets/modifier/cafe-set.png"
-import forestsetImg from "../../assets/modifier/forest-set.png"
-import lofideskImg from "../../assets/modifier/lofi_desk.png"
-import oceansetImg from "../../assets/modifier/ocean-set.png"
-import vansetImg from "../../assets/modifier/van-set.png"
-const {hanleChangeScene} = useBackgroundState()
+import chillImg from "../../assets/modifier/chill.png";
+import newyorkImg from "../../assets/modifier/new-york.png";
+import cafesetImg from "../../assets/modifier/cafe-set.png";
+import forestsetImg from "../../assets/modifier/forest-set.png";
+import lofideskImg from "../../assets/modifier/lofi_desk.png";
+import oceansetImg from "../../assets/modifier/ocean-set.png";
+import vansetImg from "../../assets/modifier/van-set.png";
+const { hanleChangeScene } = useBackgroundState();
 
 const listScene = [
   {
     linkScene: chillImg,
     isAvailable: true,
-    id: 'christmas'
+    id: "christmas"
   },
   {
     linkScene: newyorkImg,
     isAvailable: true,
-    id: 'new-york'
+    id: "new-york"
   },
   {
     linkScene: cafesetImg,
@@ -62,7 +62,6 @@ const listScene = [
     isAvailable: false
   }
 ];
-
 </script>
 <style scoped>
 .menu-scene {
@@ -91,9 +90,9 @@ const listScene = [
   position: relative;
 }
 .video-item img {
-    opacity: 0.5;
+  opacity: 0.5;
 }
-.video-active img{
+.video-active img {
   opacity: 1;
   cursor: pointer;
 }
@@ -101,16 +100,24 @@ const listScene = [
   width: 100%;
 }
 .video-item button {
-    position: absolute;
-    left: 50%;
-    bottom: 20px;
-    width: 80%;
-    background-color: #f3a952;
-    color: black;
-    border: none;
-    font-weight: bold;
-    border-radius: 20px;
-    transform: translate(-50%, 0px);
-    padding: 10px;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  width: 80%;
+  background-color: #f3a952;
+  color: black;
+  border: none;
+  font-weight: bold;
+  border-radius: 20px;
+  transform: translate(-50%, 0px);
+  padding: 10px;
+}
+@media screen and (max-width: 400px) {
+  .menu-scene {
+    width: 90%;
+    right: 5%;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
 }
 </style>

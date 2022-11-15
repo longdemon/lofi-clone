@@ -60,26 +60,29 @@ import { Icon } from "@iconify/vue";
 import { ref, computed, watch } from "vue";
 import Noise from "./Noise.vue";
 import { useStyleMusicState } from "../../store";
-import trafficAudio from "../../assets/effect/city_traffic.mp3"
-import rainAudio from "../../assets/effect/rain_city.mp3"
-import fireplaceAudio from "../../assets/effect/fireplace.mp3"
-import campfireAudio from "../../assets/effect/campfire.mp3"
-import forestAudio from "../../assets/effect/forest_night.mp3"
-import rainForestAudio from "../../assets/effect/rain_forest.mp3"
-import wavesAudio from "../../assets/effect/waves.mp3"
-import fanAudio from "../../assets/effect/fan.mp3"
-import summerStormAudio from "../../assets/effect/summer_storm.mp3"
-import riverAudio from "../../assets/effect/river.mp3"
-import birdsAudio from "../../assets/effect/birds.mp3"
-import peopleTalkInsideAudio from "../../assets/effect/people_talk_inside.mp3"
-import windAudio from "../../assets/effect/wind.mp3"
-import oceanAudio from "../../assets/effect/ocean.mp3"
-import snowAudio from "../../assets/effect/snow.mp3"
+import trafficAudio from "../../assets/effect/city_traffic.mp3";
+import rainAudio from "../../assets/effect/rain_city.mp3";
+import fireplaceAudio from "../../assets/effect/fireplace.mp3";
+import campfireAudio from "../../assets/effect/campfire.mp3";
+import forestAudio from "../../assets/effect/forest_night.mp3";
+import rainForestAudio from "../../assets/effect/rain_forest.mp3";
+import wavesAudio from "../../assets/effect/waves.mp3";
+import fanAudio from "../../assets/effect/fan.mp3";
+import summerStormAudio from "../../assets/effect/summer_storm.mp3";
+import riverAudio from "../../assets/effect/river.mp3";
+import birdsAudio from "../../assets/effect/birds.mp3";
+import peopleTalkInsideAudio from "../../assets/effect/people_talk_inside.mp3";
+import windAudio from "../../assets/effect/wind.mp3";
+import oceanAudio from "../../assets/effect/ocean.mp3";
+import snowAudio from "../../assets/effect/snow.mp3";
 
-const {styleMusicState, hanleChangeVolume, hanleChangeStyle} = useStyleMusicState()
+const {
+  styleMusicState,
+  hanleChangeVolume,
+  hanleChangeStyle
+} = useStyleMusicState();
 const value = ref(50);
 const mood = ref("sleepy");
-
 
 const volumeSize = computed(() => {
   const size = ((value.value - 0) / (100 - 0)) * 100;
@@ -93,12 +96,12 @@ const volumeSize = computed(() => {
 });
 
 watch(value, () => {
-    hanleChangeVolume(value.value)
-})
+  hanleChangeVolume(value.value);
+});
 
 const handleChangeMood = props => {
   mood.value = props;
-  hanleChangeStyle(props)
+  hanleChangeStyle(props);
 };
 
 const listNoise = [
@@ -251,5 +254,13 @@ span {
   margin: 0 10px;
   height: 10px;
   width: 356px;
+}
+@media screen and (max-width: 400px) {
+  .menu-mood {
+    width: 90%;
+    right: 5%;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
 }
 </style>

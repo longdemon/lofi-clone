@@ -2,7 +2,9 @@
   <div class="header d-flex justify-content-between align-items-center col-12">
     <Logo height="100" />
 
-    <div class="actions d-flex align-items-center col-xl-3 col-lg-4 col-md-5 col-6 justify-content-between">
+    <div
+      class="actions d-flex align-items-center col-xl-3 col-lg-4 col-md-5 col-6"
+    >
       <button id="switch-btn">
         <label class="switch">
           <input
@@ -15,11 +17,15 @@
         </label>
       </button>
       <button class="login-bth" @click="handleOpenModal">Login</button>
-      <img @click="handleZoom" class="button" src="../assets/thumb-icon/fullscreen.svg" alt />
+      <img @click="handleZoom" class="button" src="../assets/thumb-icon/fullscreen.svg" />
       <div style="position: relative;">
-        <img class="button" src="../assets/thumb-icon/menu.svg" alt @click="isShowMenu = !isShowMenu" />
+        <img
+          class="button"
+          src="../assets/thumb-icon/menu.svg"
+          @click="isShowMenu = !isShowMenu"
+        />
         <Transition>
-          <Menu v-if="isShowMenu"/>
+          <Menu v-if="isShowMenu" />
         </Transition>
       </div>
     </div>
@@ -31,11 +37,11 @@ import { ref } from "vue";
 import Logo from "./logo/Logo.vue";
 import Menu from "./menu/MenuSetting.vue";
 import { useBackgroundState } from "../store";
-import common from "../common/zoom.js"
+import common from "../common/zoom.js";
 
 const isDay = ref(true);
 const isShowMenu = ref(false);
-const {backgroundState, toggleDayNight} = useBackgroundState()
+const { backgroundState, toggleDayNight } = useBackgroundState();
 
 const emit = defineEmits(["onOpen", "onChangeDayNight"]);
 function handleOpenModal() {
@@ -46,9 +52,8 @@ const handelChangeDayNight = () => {
 };
 
 const handleZoom = () => {
-  common.handleZoom()
-}
-
+  common.handleZoom();
+};
 </script>
 
 <style>
@@ -61,6 +66,7 @@ const handleZoom = () => {
 .actions {
   z-index: 5;
   transition: 0.2s;
+  justify-content: space-between;
 }
 #switch-btn {
   background-color: transparent;
@@ -116,5 +122,15 @@ input:checked + .slider-btn:before {
   height: 50px;
   border-width: 1px;
   font-size: 1.8rem;
+}
+@media screen and (max-width: 400px){
+  .header{
+    padding: 0;
+  }
+  .actions{
+    width: 100% !important;
+    margin-top: 10px;
+    justify-content: space-around !important;
+  }
 }
 </style>

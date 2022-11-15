@@ -16,7 +16,6 @@ import { Icon } from "@iconify/vue";
 import { useBackgroundState } from "../../store";
 
 const { hanleChangeScene } = useBackgroundState();
-
 </script>
 <style scoped>
 .menu-playlist {
@@ -32,7 +31,7 @@ const { hanleChangeScene } = useBackgroundState();
   top: 50%;
   transform: translate(0px, -50%);
 }
-.playlists-template{
+.playlists-template {
   gap: 20px;
 }
 .playlists-template img {
@@ -42,22 +41,35 @@ const { hanleChangeScene } = useBackgroundState();
   object-fit: cover;
   transition: all 0.5s ease;
 }
-.p1{
+.p1 {
   content: url(../../../src/assets/stylemusic/chill.svg);
 }
-.p1:hover{
+.p1:hover {
   content: url(../../../src/assets/stylemusic/chill-hover.svg);
 }
-.p2{
+.p2 {
   content: url(../../../src/assets/stylemusic/focus.svg);
 }
-.p2:hover{
+.p2:hover {
   content: url(../../../src/assets/stylemusic/focus-hover.svg);
 }
-.p3{
+.p3 {
   content: url(../../../src/assets/stylemusic/sleep.svg);
 }
-.p3:hover{
+.p3:hover {
   content: url(../../../src/assets/stylemusic/sleep-hover.svg);
+}
+
+@media screen and (max-width: 400px) {
+  .menu-playlist {
+    width: 90%;
+    right: 5%;
+    bottom: 7%;
+    top: unset;
+    transform: translate(0, -50%);
+  }
+  .playlists-template img {
+    height: 110px;
+  }
 }
 </style>
