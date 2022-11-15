@@ -17,38 +17,6 @@ import { useBackgroundState } from "../../store";
 
 const { hanleChangeScene } = useBackgroundState();
 
-const listScene = [
-  {
-    linkScene: "../../../src/assets/modifier/chill.png",
-    isAvailable: true,
-    id: "christmas"
-  },
-  {
-    linkScene: "../../../src/assets/modifier/new-york.png",
-    isAvailable: true,
-    id: "new-york"
-  },
-  {
-    linkScene: "../../../src/assets/modifier/cafe-set.png",
-    isAvailable: false
-  },
-  {
-    linkScene: "../../../src/assets/modifier/forest-set.png",
-    isAvailable: false
-  },
-  {
-    linkScene: "../../../src/assets/modifier/lofi_desk.png",
-    isAvailable: false
-  },
-  {
-    linkScene: "../../../src/assets/modifier/ocean-set.png",
-    isAvailable: false
-  },
-  {
-    linkScene: "../../../src/assets/modifier/van-set.png",
-    isAvailable: false
-  }
-];
 </script>
 <style scoped>
 .menu-playlist {

@@ -21,12 +21,12 @@
 <script setup>
 import { Icon } from "@iconify/vue";
 import { useBackgroundState } from "../../store";
-
+import chillImg from "../../assets/modifier/chill.png"
 const {hanleChangeScene} = useBackgroundState()
 
 const listScene = [
   {
-    linkScene: "../../../src/assets/modifier/chill.png",
+    linkScene: chillImg,
     isAvailable: true,
     id: 'christmas'
   },
