@@ -17,7 +17,7 @@
         </label>
       </button>
       <button class="login-bth" @click="handleOpenModal">Login</button>
-      <img @click="handleZoom" class="button" src="../assets/thumb-icon/fullscreen.svg" />
+      <img @click="handleZoom" class="button fullscreen-btn" src="../assets/thumb-icon/fullscreen.svg" />
       <div style="position: relative;">
         <img
           class="button"
@@ -131,6 +131,9 @@ input:checked + .slider-btn:before {
     width: 100% !important;
     margin-top: 10px;
     justify-content: space-around !important;
+  }
+  .fullscreen-btn{
+    display: none;
   }
 }
 </style>
