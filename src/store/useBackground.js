@@ -16,6 +16,7 @@ const backgroundState = ref({
   sceneStarryNight: christmasStarryNight,
   sceneRainDay: christmasRainDay,
   sceneRainNight: christmasRainNight,
+  rainSound: []
 });
 
 export function useBackgroundState() {

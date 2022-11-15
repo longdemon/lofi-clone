@@ -139,7 +139,7 @@ function handleChangeSignup() {
   transform: translate(-50%, -50%);
   height: 100vh;
   width: 100vw;
-  z-index: 3;
+  z-index: 5;
 }
 .white {
   color: #fff;

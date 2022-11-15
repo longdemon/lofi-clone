@@ -10,8 +10,17 @@
 <script setup>
 import BRVideo from "./BRVideo.vue";
 import { useBackgroundState } from "../../store";
+import { watchEffect } from "vue";
 
-const {backgroundState} = useBackgroundState()
+const {backgroundState, toggleStarryRain} = useBackgroundState()
+
+watchEffect(() => {
+  if(backgroundState.value.rainSound.length === 0){
+    toggleStarryRain(true)
+  } else {
+    toggleStarryRain(false)
+  }
+})
 </script>
 
 <style>

@@ -15,7 +15,7 @@
 </template>
 
 <script setup>
-import { computed, ref, watch } from "vue";
+import { computed, ref, watch, watchEffect } from "vue";
 import { useBackgroundState } from "../../store";
 
 const props = defineProps({
@@ -65,7 +65,9 @@ watch(value, value => {
       props.idInput === "storm-volume" ||
       props.idInput === "forest-rain-volume"
     ) {
-      toggleStarryRain(false);
+      if (!backgroundState.value.rainSound.includes(props.idInput)) {
+        backgroundState.value.rainSound.push(props.idInput);
+      }
     }
   } else {
     audio.pause();
@@ -74,7 +76,10 @@ watch(value, value => {
       props.idInput === "storm-volume" ||
       props.idInput === "forest-rain-volume"
     ) {
-      toggleStarryRain(true);
+      const index = backgroundState.value.rainSound.indexOf(props.idInput);
+      if (index !== -1) {
+        backgroundState.value.rainSound.splice(index, 1);
+      }
     }
   }
 });
